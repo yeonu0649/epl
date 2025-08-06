@@ -29,6 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const row = document.createElement('tr');
         if (team.rank === 1) {
             row.classList.add('champions');
+        } else if (team.rank >= 18) {
+            row.classList.add('relegation');
         }
         row.innerHTML = `
             <td>${team.rank}</td>
